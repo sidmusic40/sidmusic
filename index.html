@@ -3,63 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>S.I.D_MUSIC — Beats & Music by S.I.D</title>
-  <meta name="description" content="Official website of S.I.D — music producer and beatmaker. Preview beats, stream released music, and get in touch.">
-  <meta name="theme-color" content="#0a0b0e">
+  <title>S.I.D_Music — Sound. Inspiration. Destiny.</title>
+  <meta name="description" content="The official platform of Samuel Idugbo-ojo Daniel (S.I.D) — original gospel beats, songs and music. Sound. Inspiration. Destiny.">
+  <meta name="theme-color" content="#0a0908">
 
-  <!-- Fonts -->
+  <!-- Fonts: modern headings, clean body, elegant serif for the motto -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Your logo becomes the browser tab icon once images/logo.png exists -->
+  <!-- Your logo becomes the browser tab icon (add images/logo.png to your repo) -->
   <link rel="icon" href="images/logo.png">
 
   <style>
     /* ============================================================
        S.I.D_MUSIC — ALL STYLES
-       1.  Design tokens (change colors here)
+       Black · White · Gold premium theme
+       1.  Design tokens
        2.  Base
        3.  Buttons, tags, pills
        4.  Header & navigation
        5.  Hero
-       6.  Intro & stats
-       7.  Section headings
-       8.  Featured beat & player
-       9.  Beats page (toolbar, upload, grid, cards)
-       10. Music page
-       11. About page
-       12. Contact page
+       6.  Section headings
+       7.  About & pillars
+       8.  Beat store
+       9.  Songs / Music
+       10. Artist profile
+       11. Featured music & player
+       12. Contact
        13. Footer
        14. Mini player
-       15. Toast messages
+       15. Toast
        16. Animations
        17. Responsive
        ============================================================ */
 
-    /* 1. DESIGN TOKENS — accent is yellow to match your logo ==== */
+    /* 1. DESIGN TOKENS — gold used sparingly, as accent only */
     :root {
-      --bg:        #0a0b0e;
-      --surface:   #12141a;
-      --surface-2: #1a1d25;
-      --border:    #262a35;
-      --text:      #f3f5f8;
-      --muted:     #9aa1ae;
-      --accent:    #ffd60a;   /* your logo's yellow */
-      --on-accent: #1c1703;
+      --bg:        #0a0908;
+      --surface:   #14110c;
+      --surface-2: #1c1812;
+      --border:    #2a2418;
+      --text:      #f4f1e8;
+      --muted:     #a89e8a;
+      --gold:      #d4af37;
+      --gold-soft: #ecd98b;
+      --on-gold:   #171203;
       --radius:    18px;
       --font-display: "Space Grotesk", sans-serif;
       --font-body:    "Inter", sans-serif;
+      --font-serif:   "Cormorant Garamond", serif;
     }
 
     /* 2. BASE ==================================================== */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; color-scheme: dark; }
     body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: var(--font-body);
-      line-height: 1.6;
+      background: var(--bg); color: var(--text);
+      font-family: var(--font-body); line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
     img { max-width: 100%; display: block; }
@@ -67,39 +68,35 @@
     ul  { list-style: none; }
     button, input, select, textarea { font: inherit; }
     button { cursor: pointer; }
-    [hidden] { display: none !important; }
 
     h1, h2, h3, h4 {
       font-family: var(--font-display);
-      line-height: 1.15;
-      letter-spacing: -0.02em;
-      font-weight: 700;
+      line-height: 1.15; letter-spacing: -0.02em; font-weight: 700;
     }
-    ::selection { background: var(--accent); color: var(--on-accent); }
+    ::selection { background: var(--gold); color: var(--on-gold); }
     a:focus-visible, button:focus-visible {
-      outline: 2px solid var(--accent);
-      outline-offset: 3px;
+      outline: 2px solid var(--gold); outline-offset: 3px;
     }
 
-    .container { width: min(1120px, 92%); margin-inline: auto; }
-    .text-accent { color: var(--accent); }
+    .container { width: min(1140px, 92%); margin-inline: auto; }
+    .text-gold { color: var(--gold); }
     .hint { color: var(--muted); font-size: .85rem; }
-    .inner-page { padding: 72px 0 90px; }
+    .section { padding: 100px 0; scroll-margin-top: 84px; }
+    section { scroll-margin-top: 84px; }
 
     /* 3. BUTTONS, TAGS, PILLS ==================================== */
     .btn {
       display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
-      padding: .9rem 1.75rem; border-radius: 999px;
-      font-weight: 600; font-size: .95rem;
-      border: 1px solid transparent;
-      transition: transform .15s ease, background .2s ease, border-color .2s, color .2s;
+      padding: .95rem 1.9rem; border-radius: 999px;
+      font-weight: 600; font-size: .95rem; border: 1px solid transparent;
+      transition: transform .15s ease, background .2s, border-color .2s, color .2s;
     }
     .btn:hover { transform: translateY(-2px); }
-    .btn-primary { background: var(--accent); color: var(--on-accent); }
-    .btn-primary:hover { background: #ffe14d; }
+    .btn-gold  { background: var(--gold); color: var(--on-gold); }
+    .btn-gold:hover  { background: var(--gold-soft); }
     .btn-ghost { border-color: var(--border); color: var(--text); background: transparent; }
-    .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
-    .btn-small { padding: .55rem 1.1rem; font-size: .85rem; }
+    .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+    .btn-small { padding: .55rem 1.15rem; font-size: .85rem; }
 
     .tag {
       display: inline-flex; align-items: center;
@@ -107,49 +104,47 @@
       background: var(--surface-2); border: 1px solid var(--border);
       color: var(--muted); font-size: .78rem; font-weight: 500;
     }
-    .tag-accent { background: var(--accent); color: var(--on-accent); border-color: transparent; }
+    .tag-gold { background: var(--gold); color: var(--on-gold); border-color: transparent; }
 
     .pill {
-      padding: .5rem 1rem; border-radius: 999px;
+      padding: .5rem 1.05rem; border-radius: 999px;
       background: var(--surface); border: 1px solid var(--border);
       color: var(--muted); font-size: .85rem; font-weight: 500;
       transition: color .2s, border-color .2s, background .2s;
     }
-    .pill:hover { color: var(--text); border-color: var(--accent); }
-    .pill.is-active { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+    .pill:hover { color: var(--text); border-color: var(--gold); }
+    .pill.is-active { background: var(--gold); border-color: var(--gold); color: var(--on-gold); }
 
     /* 4. HEADER & NAVIGATION ===================================== */
     .site-header {
       position: sticky; top: 0; z-index: 50;
-      background: rgba(10, 11, 14, .82);
+      background: rgba(10, 9, 8, .85);
       backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border);
     }
-    .header-inner {
-      display: flex; align-items: center; gap: 2rem;
-      height: 76px; position: relative;
+    .header-inner { display: flex; align-items: center; gap: 2rem; height: 78px; position: relative; }
+    .logo { display: inline-flex; align-items: center; gap: .65rem; }
+    /* Your official logo — height-capped, never stretched */
+    .logo-img {
+      height: 48px; width: auto; display: none;
+      border-radius: 10px;
     }
-    .logo { display: inline-flex; align-items: center; gap: .6rem; }
-    .logo-img { height: 40px; width: auto; display: none; }
     .logo-text { font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; }
-    .logo-accent { color: var(--accent); }
+    .logo-text .text-gold { color: var(--gold); }
 
     .site-nav { margin-left: auto; display: flex; gap: 1.9rem; }
     .nav-link { color: var(--muted); font-weight: 500; font-size: .95rem; transition: color .2s; position: relative; }
     .nav-link:hover { color: var(--text); }
-    .nav-link.is-active { color: var(--text); }
+    .nav-link.is-active { color: var(--gold); }
     .nav-link.is-active::after {
-      content: ""; position: absolute; left: 50%; bottom: -8px;
-      transform: translateX(-50%);
-      width: 5px; height: 5px; border-radius: 50%;
-      background: var(--accent);
+      content: ""; position: absolute; left: 50%; bottom: -8px; transform: translateX(-50%);
+      width: 5px; height: 5px; border-radius: 50%; background: var(--gold);
     }
     .header-cta { margin-left: .5rem; white-space: nowrap; }
 
     .nav-toggle {
       display: none; flex-direction: column; gap: 5px;
-      background: none; border: 0;
-      padding: 8px; margin-left: auto;
+      background: none; border: 0; padding: 8px; margin-left: auto;
     }
     .nav-toggle span {
       display: block; width: 24px; height: 2px;
@@ -160,298 +155,250 @@
     .nav-toggle.open span:nth-child(2) { opacity: 0; }
     .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-    /* 5. HERO ==================================================== */
+    /* 5. HERO ===================================================== */
     .hero {
-      padding: 100px 0 80px;
+      padding: 96px 0 84px;
       background:
-        radial-gradient(ellipse 55% 45% at 75% -5%, rgba(255, 214, 10, .07), transparent),
+        radial-gradient(ellipse 50% 45% at 78% -5%, rgba(212, 175, 55, .09), transparent),
+        radial-gradient(ellipse 40% 40% at 8% 105%, rgba(212, 175, 55, .04), transparent),
         var(--bg);
     }
-    .hero-grid {
-      display: grid; grid-template-columns: 1.1fr .9fr;
-      gap: 4.5rem; align-items: center;
-    }
+    .hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 4.5rem; align-items: center; }
+
     .eyebrow {
       display: inline-flex; align-items: center; gap: .6rem;
-      color: var(--accent); font-weight: 600; font-size: .8rem;
-      letter-spacing: .14em; text-transform: uppercase;
-      margin-bottom: 1.25rem;
+      color: var(--gold); font-weight: 600; font-size: .78rem;
+      letter-spacing: .16em; text-transform: uppercase; margin-bottom: 1.4rem;
     }
-    .eyebrow::before { content: ""; width: 28px; height: 2px; background: var(--accent); }
-    .hero-title { font-size: clamp(2.5rem, 5.2vw, 4.1rem); margin-bottom: 1.4rem; }
-    .hero-text  { color: var(--muted); font-size: 1.08rem; max-width: 34rem; margin-bottom: 2.2rem; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2.5rem; }
+    .eyebrow::before { content: ""; width: 28px; height: 1.5px; background: var(--gold); }
+
+    .hero-title { font-size: clamp(2.6rem, 5.4vw, 4.3rem); margin-bottom: .9rem; }
+    .motto {
+      font-family: var(--font-serif); font-style: italic; font-weight: 500;
+      font-size: clamp(1.45rem, 3vw, 2.15rem); color: var(--gold-soft);
+      margin-bottom: 1.5rem;
+    }
+    .hero-text { color: var(--muted); font-size: 1.06rem; max-width: 35rem; margin-bottom: 2.3rem; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2.6rem; }
 
     .hero-socials { display: flex; align-items: center; gap: 1rem; color: var(--muted); font-size: .85rem; }
     .social-row { display: flex; gap: .6rem; }
     .social-link {
-      display: grid; place-items: center;
-      width: 40px; height: 40px; border-radius: 50%;
+      display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%;
       border: 1px solid var(--border); color: var(--muted);
       transition: color .2s, border-color .2s, transform .2s;
     }
-    .social-link:hover { color: var(--accent); border-color: var(--accent); transform: translateY(-3px); }
+    .social-link:hover { color: var(--gold); border-color: var(--gold); transform: translateY(-3px); }
 
+    /* Your official artist photo — displayed clean, gold hairline frame */
     .photo-frame {
-      position: relative; border-radius: var(--radius);
-      overflow: hidden; border: 1px solid var(--border);
+      position: relative; border-radius: var(--radius); overflow: hidden;
+      border: 1px solid rgba(212, 175, 55, .35);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, .55);
     }
     .photo-frame img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
     .photo-frame::after {
       content: ""; position: absolute; inset: 0;
-      background: linear-gradient(to top, rgba(10, 11, 14, .55), transparent 45%);
+      background: linear-gradient(to top, rgba(10, 9, 8, .62), transparent 45%);
     }
     .photo-badge {
       position: absolute; left: 16px; bottom: 16px; z-index: 1;
       display: inline-flex; align-items: center; gap: .55rem;
-      background: rgba(18, 20, 26, .85); backdrop-filter: blur(8px);
+      background: rgba(20, 17, 12, .88); backdrop-filter: blur(8px);
       border: 1px solid var(--border); border-radius: 999px;
-      padding: .5rem .95rem; font-size: .82rem; font-weight: 500;
+      padding: .5rem 1rem; font-size: .8rem; font-weight: 500;
     }
     .pulse-dot {
       width: 8px; height: 8px; border-radius: 50%;
-      background: var(--accent); animation: pulse 2s infinite;
+      background: var(--gold); animation: pulse 2s infinite;
     }
 
-    /* 6. INTRO & STATS =========================================== */
-    .intro { padding: 40px 0 90px; }
-    .intro-grid { display: grid; grid-template-columns: 200px 1fr; gap: 3rem; }
-    .intro-label {
-      color: var(--accent); font-size: .8rem; font-weight: 600;
-      letter-spacing: .14em; text-transform: uppercase;
-    }
-    .intro-text h2 { font-size: clamp(1.7rem, 3vw, 2.3rem); margin-bottom: 1.1rem; }
-    .intro-text p  { color: var(--muted); max-width: 46rem; }
-    .stats {
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 1rem; margin-top: 2.2rem; max-width: 560px;
-    }
-    .stat {
+    /* 6. SECTION HEADINGS ========================================= */
+    .section-head { margin-bottom: 2.6rem; }
+    .section-title { font-size: clamp(1.7rem, 3.2vw, 2.4rem); margin-top: .4rem; }
+    .section-sub { color: var(--muted); margin-top: .6rem; max-width: 42rem; }
+
+    /* 7. ABOUT & PILLARS ========================================== */
+    .about-intro { color: var(--muted); font-size: 1.05rem; max-width: 48rem; margin-bottom: 3rem; }
+    .pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.3rem; }
+    .pillar {
       background: var(--surface); border: 1px solid var(--border);
-      border-radius: 14px; padding: 1.1rem 1.25rem;
+      border-radius: var(--radius); padding: 1.9rem 1.7rem;
+      transition: border-color .25s, transform .25s;
     }
-    .stat strong { display: block; font-family: var(--font-display); font-size: 1.5rem; color: var(--accent); }
-    .stat span { color: var(--muted); font-size: .85rem; }
+    .pillar:hover { border-color: rgba(212, 175, 55, .45); transform: translateY(-4px); }
+    .pillar-letter {
+      font-family: var(--font-serif); font-style: italic; font-weight: 600;
+      font-size: 3.3rem; color: var(--gold); line-height: 1; margin-bottom: 1.1rem;
+    }
+    .pillar h3 { font-size: 1.15rem; margin-bottom: .55rem; }
+    .pillar p { color: var(--muted); font-size: .93rem; }
 
-    /* 7. SECTION HEADINGS ======================================== */
-    .section-head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 1.5rem; gap: 1rem; }
-    .section-title { font-size: clamp(1.6rem, 3vw, 2.2rem); }
-    .section-sub { color: var(--muted); margin-top: .45rem; max-width: 40rem; }
-    .see-all { color: var(--muted); font-weight: 500; font-size: .95rem; transition: color .2s; white-space: nowrap; }
-    .see-all:hover { color: var(--accent); }
+    /* 8. BEAT STORE =============================================== */
+    .beats-toolbar {
+      display: flex; flex-wrap: wrap; gap: 1rem;
+      justify-content: space-between; align-items: center; margin-bottom: 1.4rem;
+    }
+    .search-box {
+      display: flex; align-items: center; gap: .55rem;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 999px; padding: .6rem 1.15rem; color: var(--muted);
+    }
+    .search-box input {
+      background: none; border: 0; color: var(--text); outline: none;
+      width: min(230px, 55vw); font-size: .95rem;
+    }
+    .genre-pills { display: flex; flex-wrap: wrap; gap: .5rem; }
 
-    /* 8. FEATURED BEAT & PLAYER ================================= */
-    .featured { padding: 40px 0 100px; }
+    .beat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(245px, 1fr)); gap: 1.3rem; }
     .beat-card {
-      display: grid; grid-template-columns: 280px 1fr;
       background: var(--surface); border: 1px solid var(--border);
       border-radius: var(--radius); overflow: hidden;
+      display: flex; flex-direction: column;
+      transition: border-color .25s, transform .25s;
     }
-    .beat-cover img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
-    .beat-card.is-playing .beat-cover img { transform: scale(1.05); }
-    .beat-info {
-      padding: 30px 34px;
-      display: flex; flex-direction: column; gap: 1.15rem;
-      justify-content: center;
+    .beat-card:hover { transform: translateY(-4px); }
+    .beat-card.is-playing { border-color: var(--gold); }
+    .bc-cover { position: relative; aspect-ratio: 1; overflow: hidden; }
+    .bc-cover img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+    .beat-card:hover .bc-cover img { transform: scale(1.05); }
+    .bc-play {
+      position: absolute; right: 12px; bottom: 12px;
+      width: 52px; height: 52px; border-radius: 50%;
+      background: var(--gold); color: var(--on-gold); border: 0;
+      display: grid; place-items: center;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, .5);
+      transition: transform .15s;
     }
-    .beat-meta { display: flex; flex-wrap: wrap; gap: .5rem; }
-    .beat-title { font-size: clamp(1.4rem, 2.4vw, 1.9rem); }
-    .player { display: flex; align-items: center; gap: 1.1rem; }
+    .bc-play:hover { transform: scale(1.08); }
+    .bc-body { padding: 1.05rem 1.15rem 1.2rem; display: flex; flex-direction: column; gap: .6rem; flex: 1; }
+    .bc-body h3 { font-size: 1.08rem; }
+    .bc-tags { display: flex; flex-wrap: wrap; gap: .4rem; }
+    .bc-foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: .6rem; }
+    .price {
+      font-family: var(--font-display); font-weight: 700;
+      color: var(--gold); font-size: 1.05rem;
+    }
+    .price.is-free { color: var(--gold-soft); font-size: .8rem; letter-spacing: .1em; }
 
+    .empty-msg { color: var(--muted); text-align: center; padding: 2.5rem 0; }
+    .store-note {
+      margin-top: 2.5rem; background: var(--surface);
+      border: 1px solid var(--border); border-radius: 14px;
+      padding: 1.1rem 1.4rem; color: var(--muted); font-size: .9rem;
+    }
+
+    /* 9. SONGS / MUSIC ============================================ */
+    .song-row {
+      display: grid; grid-template-columns: 96px 1fr auto; gap: 1.4rem; align-items: center;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 1.05rem; margin-bottom: 1rem;
+      transition: border-color .25s;
+    }
+    .song-row.is-playing { border-color: var(--gold); }
+    .song-cover { width: 96px; height: 96px; border-radius: 12px; object-fit: cover; }
+    .song-info h3 { font-size: 1.15rem; margin-bottom: .25rem; }
+    .song-year { color: var(--muted); font-size: .85rem; font-weight: 400; }
+    .song-desc { color: var(--muted); font-size: .9rem; max-width: 40rem; }
+    .song-side { display: flex; align-items: center; gap: 1.25rem; }
+    .row-play {
+      width: 48px; height: 48px; border-radius: 50%; flex: none;
+      background: var(--gold); color: var(--on-gold); border: 0;
+      display: grid; place-items: center; transition: transform .15s;
+    }
+    .row-play:hover { transform: scale(1.08); }
+    .listen-pills { display: flex; flex-direction: column; gap: .4rem; }
+    .listen-pill {
+      padding: .38rem .95rem; border-radius: 999px; text-align: center;
+      background: var(--surface-2); border: 1px solid var(--border);
+      font-size: .76rem; font-weight: 600; color: var(--muted);
+      transition: color .2s, border-color .2s; white-space: nowrap;
+    }
+    .listen-pill:hover { color: var(--gold); border-color: var(--gold); }
+
+    /* 10. ARTIST PROFILE ========================================== */
+    .artist-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 3.5rem; align-items: center; }
+    .artist-photo img {
+      border-radius: var(--radius); aspect-ratio: 4 / 5; object-fit: cover;
+      border: 1px solid rgba(212, 175, 55, .35); width: 100%;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, .5);
+    }
+    .role-line { color: var(--gold); font-size: .82rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 600; margin-bottom: 1.2rem; }
+    .artist-text h3 { font-size: clamp(1.6rem, 2.6vw, 2.1rem); margin-bottom: 1.1rem; }
+    .artist-text p { color: var(--muted); margin-bottom: 1rem; }
+    .artist-text .btn { margin-top: .6rem; }
+    .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.8rem 0 .5rem; }
+    .stat {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 14px; padding: 1.05rem 1.2rem;
+    }
+    .stat strong { display: block; font-family: var(--font-display); font-size: 1.5rem; color: var(--gold); }
+    .stat span { color: var(--muted); font-size: .8rem; }
+
+    /* 11. FEATURED MUSIC & PLAYER ================================= */
+    .featured-card {
+      display: grid; grid-template-columns: 340px 1fr;
+      background: var(--surface); border: 1px solid rgba(212, 175, 55, .35);
+      border-radius: var(--radius); overflow: hidden;
+      box-shadow: 0 30px 90px rgba(0, 0, 0, .45);
+    }
+    .featured-card.is-playing { border-color: var(--gold); }
+    .featured-cover img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+    .featured-card.is-playing .featured-cover img { transform: scale(1.04); }
+    .featured-info { padding: 2.4rem 2.6rem; display: flex; flex-direction: column; gap: 1.05rem; justify-content: center; }
+    .featured-info .tag-gold { align-self: flex-start; }
+    .featured-info h3 { font-size: clamp(1.5rem, 2.6vw, 2rem); }
+    .featured-desc { color: var(--muted); max-width: 38rem; }
+
+    .player { display: flex; align-items: center; gap: 1.1rem; }
     .play-btn {
       flex: none; width: 62px; height: 62px; border-radius: 50%;
-      background: var(--accent); color: var(--on-accent);
-      border: 0;
+      background: var(--gold); color: var(--on-gold); border: 0;
       display: grid; place-items: center;
       transition: transform .15s ease, box-shadow .2s ease;
     }
-    .play-btn:hover { transform: scale(1.07); box-shadow: 0 0 0 8px rgba(255, 214, 10, .15); }
+    .play-btn:hover { transform: scale(1.07); box-shadow: 0 0 0 8px rgba(212, 175, 55, .14); }
 
-    /* Icon swapping: works on every play button in the site */
+    /* Play/pause icon swap — works on every play button site-wide */
     .icon-pause { display: none; }
     .is-playing .icon-play  { display: none; }
     .is-playing .icon-pause { display: block; }
 
     .player-right { flex: 1; display: flex; flex-direction: column; gap: .55rem; min-width: 0; }
     .player-top { display: flex; align-items: center; justify-content: space-between; }
-
     .eq { display: flex; align-items: flex-end; gap: 3px; height: 16px; }
     .eq span { width: 3px; border-radius: 2px; background: var(--muted); height: 25%; }
-    .is-playing .eq span { background: var(--accent); animation: bounce .8s ease-in-out infinite; }
+    .is-playing .eq span { background: var(--gold); animation: bounce .8s ease-in-out infinite; }
     .eq span:nth-child(2) { animation-delay: .12s; }
     .eq span:nth-child(3) { animation-delay: .24s; }
     .eq span:nth-child(4) { animation-delay: .36s; }
     .eq span:nth-child(5) { animation-delay: .48s; }
-
     .time { color: var(--muted); font-size: .8rem; font-variant-numeric: tabular-nums; }
-    .progress {
-      position: relative; height: 6px;
-      background: var(--surface-2); border-radius: 999px; cursor: pointer;
-    }
-    .progress-fill {
-      position: absolute; inset: 0 auto 0 0; width: 0%;
-      background: var(--accent); border-radius: 999px;
-    }
+    .progress { position: relative; height: 6px; background: var(--surface-2); border-radius: 999px; cursor: pointer; }
+    .progress-fill { position: absolute; inset: 0 auto 0 0; width: 0%; background: var(--gold); border-radius: 999px; }
     .progress-fill::after {
       content: ""; position: absolute; right: -5px; top: 50%;
       transform: translateY(-50%) scale(0);
       width: 12px; height: 12px; border-radius: 50%;
-      background: var(--accent); transition: transform .15s;
+      background: var(--gold); transition: transform .15s;
     }
     .progress:hover .progress-fill::after { transform: translateY(-50%) scale(1); }
-    .beat-actions { display: flex; gap: .8rem; }
 
-    /* 9. BEATS PAGE ============================================== */
-    .beats-toolbar {
-      display: flex; flex-wrap: wrap; gap: 1rem;
-      justify-content: space-between; align-items: center;
-      margin-bottom: 1.25rem;
-    }
-    .search-box {
-      display: flex; align-items: center; gap: .55rem;
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: 999px; padding: .6rem 1.1rem; color: var(--muted);
-    }
-    .search-box input {
-      background: none; border: 0; color: var(--text); outline: none;
-      width: min(220px, 55vw); font-size: .95rem;
-    }
-    .genre-pills { display: flex; flex-wrap: wrap; gap: .5rem; }
-
-    .upload-card {
-      background: var(--surface);
-      border: 1px dashed var(--border);
-      border-radius: var(--radius);
-      padding: 1.5rem 1.6rem;
-      margin: 1.75rem 0 2.25rem;
-    }
-    .upload-card h3 {
-      display: flex; align-items: center; gap: .55rem;
-      font-size: 1.05rem; margin-bottom: .3rem;
-    }
-    .upload-card h3 svg { color: var(--accent); }
-    .upload-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1rem; margin-top: 1.1rem;
-    }
-    .upload-grid .btn { grid-column: 1 / -1; justify-self: start; }
-    .field { display: flex; flex-direction: column; gap: .4rem; }
-    .field label { font-size: .8rem; color: var(--muted); font-weight: 500; }
-    .field input, .field select, .field textarea {
-      background: var(--surface-2); border: 1px solid var(--border);
-      border-radius: 10px; padding: .65rem .8rem; color: var(--text);
-    }
-    .field input:focus, .field select:focus, .field textarea:focus {
-      outline: 2px solid var(--accent); outline-offset: 0; border-color: transparent;
-    }
-
-    .beat-grid {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-      gap: 1.25rem;
-    }
-    .beat-card-sm {
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: var(--radius); overflow: hidden;
-      display: flex; flex-direction: column;
-      transition: border-color .25s, transform .25s;
-    }
-    .beat-card-sm:hover { transform: translateY(-4px); }
-    .beat-card-sm.is-playing { border-color: var(--accent); }
-    .bc-cover { position: relative; aspect-ratio: 1; overflow: hidden; }
-    .bc-cover img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
-    .beat-card-sm:hover .bc-cover img { transform: scale(1.05); }
-    .bc-play {
-      position: absolute; right: 12px; bottom: 12px;
-      width: 52px; height: 52px; border-radius: 50%;
-      background: var(--accent); color: var(--on-accent); border: 0;
-      display: grid; place-items: center;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, .45);
-      transition: transform .15s;
-    }
-    .bc-play:hover { transform: scale(1.08); }
-    .bc-body {
-      padding: 1rem 1.1rem 1.2rem;
-      display: flex; flex-direction: column; gap: .6rem; flex: 1;
-    }
-    .bc-tags { display: flex; flex-wrap: wrap; gap: .4rem; }
-    .bc-body h3 { font-size: 1.05rem; }
-    .bc-actions { margin-top: auto; display: flex; gap: .5rem; }
-
-    .empty-msg { color: var(--muted); text-align: center; padding: 2.5rem 0; }
-    .store-teaser {
-      margin-top: 2.75rem; background: var(--surface);
-      border: 1px solid var(--border); border-radius: 14px;
-      padding: 1.1rem 1.4rem; color: var(--muted); font-size: .92rem;
-    }
-    .store-teaser a { color: var(--accent); font-weight: 600; }
-
-    /* 10. MUSIC PAGE ============================================= */
-    .song-row {
-      display: grid; grid-template-columns: 96px 1fr auto;
-      gap: 1.25rem; align-items: center;
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: var(--radius); padding: 1rem;
-      margin-bottom: 1rem;
-      transition: border-color .25s;
-    }
-    .song-row.is-playing { border-color: var(--accent); }
-    .song-cover { width: 96px; height: 96px; border-radius: 12px; object-fit: cover; }
-    .song-info h3 { font-size: 1.15rem; margin-bottom: .2rem; }
-    .song-year { color: var(--muted); font-size: .85rem; }
-    .song-side { display: flex; align-items: center; gap: 1.25rem; }
-    .row-play {
-      width: 48px; height: 48px; border-radius: 50%; flex: none;
-      background: var(--accent); color: var(--on-accent); border: 0;
-      display: grid; place-items: center;
-      transition: transform .15s;
-    }
-    .row-play:hover { transform: scale(1.08); }
-    .listen-pills { display: flex; flex-wrap: wrap; gap: .5rem; }
-    .listen-pill {
-      padding: .45rem .95rem; border-radius: 999px;
-      background: var(--surface-2); border: 1px solid var(--border);
-      font-size: .8rem; font-weight: 600; color: var(--muted);
-      transition: color .2s, border-color .2s;
-    }
-    .listen-pill:hover { color: var(--accent); border-color: var(--accent); }
-
-    /* 11. ABOUT PAGE ============================================= */
-    .about-grid {
-      display: grid; grid-template-columns: .9fr 1.1fr;
-      gap: 3.5rem; align-items: center;
-    }
-    .about-photo img {
-      border-radius: var(--radius); aspect-ratio: 4 / 5;
-      object-fit: cover; border: 1px solid var(--border); width: 100%;
-    }
-    .about-text h3 { font-size: 1.5rem; margin-bottom: 1rem; }
-    .about-text p { color: var(--muted); margin-bottom: 1rem; }
-    .about-text .btn { margin-top: .5rem; }
-
-    .mission { margin-top: 3.5rem; }
-    .mission-title { font-size: 1.4rem; margin-bottom: 1.25rem; }
-    .mission-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
-    .pillar {
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: var(--radius); padding: 1.6rem;
-    }
-    .pillar-icon {
-      width: 48px; height: 48px; border-radius: 14px;
-      background: rgba(255, 214, 10, .12); color: var(--accent);
-      display: grid; place-items: center; margin-bottom: 1rem;
-    }
-    .pillar h4 { font-size: 1.05rem; margin-bottom: .5rem; }
-    .pillar p { color: var(--muted); font-size: .92rem; }
-
-    /* 12. CONTACT PAGE =========================================== */
-    .contact-grid {
-      display: grid; grid-template-columns: 1.2fr .8fr;
-      gap: 2.5rem; align-items: start;
-    }
+    /* 12. CONTACT ================================================= */
+    .contact-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 2.5rem; align-items: start; }
     .contact-form {
       background: var(--surface); border: 1px solid var(--border);
       border-radius: var(--radius); padding: 2rem;
       display: flex; flex-direction: column; gap: 1.1rem;
+    }
+    .field { display: flex; flex-direction: column; gap: .4rem; }
+    .field label { font-size: .8rem; color: var(--muted); font-weight: 500; }
+    .field input, .field textarea {
+      background: var(--surface-2); border: 1px solid var(--border);
+      border-radius: 10px; padding: .7rem .85rem; color: var(--text);
+    }
+    .field input:focus, .field textarea:focus {
+      outline: 2px solid var(--gold); outline-offset: 0; border-color: transparent;
     }
     .contact-form textarea { resize: vertical; min-height: 140px; }
     .contact-form .btn { align-self: flex-start; }
@@ -459,54 +406,47 @@
     .info-card {
       display: flex; gap: 1rem; align-items: center;
       background: var(--surface); border: 1px solid var(--border);
-      border-radius: 14px; padding: 1.1rem 1.25rem;
-      margin-bottom: 1rem; transition: border-color .2s;
+      border-radius: 14px; padding: 1.1rem 1.25rem; margin-bottom: 1rem;
+      transition: border-color .2s;
     }
-    a.info-card:hover { border-color: var(--accent); }
+    a.info-card:hover { border-color: var(--gold); }
     .info-icon {
       width: 44px; height: 44px; flex: none; border-radius: 12px;
-      background: rgba(255, 214, 10, .12); color: var(--accent);
+      background: rgba(212, 175, 55, .12); color: var(--gold);
       display: grid; place-items: center;
     }
     .info-card strong { display: block; font-size: .95rem; }
     .info-card span { color: var(--muted); font-size: .85rem; }
-    .contact-socials { margin-top: 1.5rem; }
-    .contact-socials .social-row { margin-top: .7rem; }
+    .contact-socials { margin-top: 1.6rem; }
+    .contact-socials .social-row { margin-top: .75rem; }
 
     /* 13. FOOTER ================================================== */
     .site-footer { border-top: 1px solid var(--border); background: var(--surface); }
-    .footer-grid {
-      display: grid; grid-template-columns: 1.6fr 1fr 1fr;
-      gap: 3rem; padding: 64px 0;
-    }
+    .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 3rem; padding: 64px 0; }
     .site-footer .logo-text { font-size: 1.15rem; }
-    .site-footer .logo-img { height: 34px; }
-    .footer-tagline { color: var(--muted); margin: 1rem 0 1.5rem; max-width: 22rem; }
-    .footer-heading {
-      font-size: .8rem; text-transform: uppercase;
-      letter-spacing: .12em; margin-bottom: 1.1rem;
-    }
+    .site-footer .logo-img { height: 40px; }
+    .footer-tagline { color: var(--muted); margin: 1rem 0 1.5rem; max-width: 23rem; }
+    .footer-heading { font-size: .78rem; text-transform: uppercase; letter-spacing: .14em; margin-bottom: 1.1rem; color: var(--gold); }
     .footer-links { display: flex; flex-direction: column; gap: .65rem; }
     .footer-links a, .footer-links span { color: var(--muted); font-size: .95rem; }
     .footer-links a { transition: color .2s; }
-    .footer-links a:hover { color: var(--accent); }
+    .footer-links a:hover { color: var(--gold); }
     .footer-bottom {
-      border-top: 1px solid var(--border); padding: 1.2rem 0;
+      border-top: 1px solid var(--border); padding: 1.25rem 0;
       display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
       color: var(--muted); font-size: .85rem;
     }
 
-    /* 14. MINI PLAYER (follows you across pages) ================= */
+    /* 14. MINI PLAYER ============================================= */
     .mini-player {
       position: fixed; left: 50%; bottom: 18px;
       transform: translate(-50%, 140%);
       width: min(680px, 92%);
-      background: rgba(18, 20, 26, .95); backdrop-filter: blur(14px);
+      background: rgba(20, 17, 12, .96); backdrop-filter: blur(14px);
       border: 1px solid var(--border); border-radius: 16px;
-      padding: .7rem 1rem;
-      display: flex; align-items: center; gap: 1rem;
+      padding: .7rem 1rem; display: flex; align-items: center; gap: 1rem;
       z-index: 80; transition: transform .35s ease;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, .5);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, .6);
     }
     .mini-player.visible { transform: translate(-50%, 0); }
     .mini-cover { width: 44px; height: 44px; border-radius: 8px; object-fit: cover; flex: none; }
@@ -515,22 +455,19 @@
       display: block; font-family: var(--font-display); font-size: .95rem;
       white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
     }
-    .mini-progress {
-      height: 4px; background: var(--surface-2);
-      border-radius: 999px; margin-top: .45rem; cursor: pointer;
-    }
-    .mini-fill { height: 100%; width: 0; background: var(--accent); border-radius: 999px; }
+    .mini-progress { height: 4px; background: var(--surface-2); border-radius: 999px; margin-top: .45rem; cursor: pointer; }
+    .mini-fill { height: 100%; width: 0; background: var(--gold); border-radius: 999px; }
     .mini-time { color: var(--muted); font-size: .75rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
     .mini-btn {
       width: 44px; height: 44px; border-radius: 50%; flex: none;
-      background: var(--accent); color: var(--on-accent); border: 0;
+      background: var(--gold); color: var(--on-gold); border: 0;
       display: grid; place-items: center;
     }
     .mini-close { background: none; border: 0; color: var(--muted); padding: .4rem; }
     .mini-close:hover { color: var(--text); }
     body.has-mini { padding-bottom: 96px; }
 
-    /* 15. TOASTS ================================================= */
+    /* 15. TOAST =================================================== */
     .toast {
       position: fixed; left: 50%; bottom: 100px;
       transform: translate(-50%, 20px);
@@ -546,9 +483,9 @@
     .reveal.visible { opacity: 1; transform: none; }
 
     @keyframes pulse {
-      0%   { box-shadow: 0 0 0 0 rgba(255, 214, 10, .5); }
-      70%  { box-shadow: 0 0 0 9px rgba(255, 214, 10, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(255, 214, 10, 0); }
+      0%   { box-shadow: 0 0 0 0 rgba(212, 175, 55, .5); }
+      70%  { box-shadow: 0 0 0 9px rgba(212, 175, 55, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
     }
     @keyframes bounce {
       0%, 100% { height: 25%; }
@@ -560,18 +497,16 @@
     }
 
     /* 17. RESPONSIVE ============================================= */
-    @media (max-width: 960px) {
-      .hero { padding: 72px 0 64px; }
+    @media (max-width: 1000px) {
       .hero-grid { grid-template-columns: 1fr; gap: 3rem; }
-      .hero-photo { max-width: 460px; }
-      .beat-card { grid-template-columns: 1fr; }
-      .beat-cover img { aspect-ratio: 16 / 9; }
-      .intro-grid { grid-template-columns: 1fr; gap: 1rem; }
-      .footer-grid { grid-template-columns: 1fr; gap: 2.2rem; }
-      .about-grid { grid-template-columns: 1fr; gap: 2rem; }
-      .about-photo { max-width: 460px; }
-      .mission-grid { grid-template-columns: 1fr; }
+      .hero-photo { max-width: 470px; }
+      .pillars { grid-template-columns: 1fr; }
+      .featured-card { grid-template-columns: 1fr; }
+      .featured-cover img { aspect-ratio: 16 / 9; }
+      .artist-grid { grid-template-columns: 1fr; gap: 2.2rem; }
+      .artist-photo { max-width: 470px; }
       .contact-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 2.2rem; }
     }
     @media (max-width: 860px) {
       .nav-toggle { display: flex; }
@@ -588,16 +523,22 @@
       .beats-toolbar { flex-direction: column; align-items: stretch; }
       .search-box input { width: 100%; }
     }
-    @media (max-width: 700px) {
+    @media (max-width: 640px) {
+      .section { padding: 76px 0; }
       .song-row { grid-template-columns: 64px 1fr; }
       .song-cover { width: 64px; height: 64px; }
       .song-side { grid-column: 1 / -1; justify-content: space-between; }
+      .listen-pills { flex-direction: row; flex-wrap: wrap; }
+      .stats { grid-template-columns: repeat(3, 1fr); gap: .6rem; }
+      .stat { padding: .8rem .6rem; }
+      .stat strong { font-size: 1.2rem; }
     }
-    @media (max-width: 560px) {
+    @media (max-width: 520px) {
       .hero-actions .btn { width: 100%; }
-      .beat-info { padding: 22px 20px; }
-      .stats { grid-template-columns: 1fr 1fr; }
+      .hero-socials { flex-direction: column; align-items: flex-start; gap: .7rem; }
+      .featured-info { padding: 1.6rem 1.4rem; }
       .contact-form .btn { align-self: stretch; }
+      .footer-bottom { flex-direction: column; }
     }
   </style>
 </head>
@@ -605,8 +546,7 @@
 <body>
 
 <!-- ============================================================
-     SVG ICON LIBRARY — each icon is defined once and reused with
-     <svg><use href="#i-name"/></svg>
+     SVG ICON LIBRARY — each icon defined once, reused anywhere
      ============================================================ -->
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
   <symbol id="i-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
@@ -639,42 +579,34 @@
   <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>
   </symbol>
-  <symbol id="i-note" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
-  </symbol>
-  <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-  </symbol>
-  <symbol id="i-trend" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M23 6l-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/>
-  </symbol>
   <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
     <path d="M18 6 6 18M6 6l12 12"/>
   </symbol>
-  <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-    <path d="M12 5v14M5 12h14"/>
-  </symbol>
 </svg>
 
-<!-- ================= HEADER / NAVIGATION ================= -->
+<!-- ================= HEADER / NAVIGATION =================
+     Your official logo appears here. Until images/logo.png
+     exists in your repo, it loads directly from the chat copy. -->
 <header class="site-header">
   <div class="container header-inner">
 
-    <!-- Your logo: drop it at images/logo.png and it replaces the text automatically -->
-    <a href="#home" class="logo" aria-label="S.I.D_MUSIC — home">
-      <img src="images/logo.png" alt="S.I.D_MUSIC logo" class="logo-img">
-      <span class="logo-text">S.I.D<span class="logo-accent">_MUSIC</span></span>
+    <a href="#home" class="logo" aria-label="S.I.D_Music — home">
+      <img src="images/logo.png"
+           alt="S.I.D_Music official logo — Sound. Inspiration. Destiny."
+           class="logo-img"
+           data-fallback="https://z-cdn-media.chatglm.cn/files/d16b1698-37c2-4718-b5a1-cf36b2e99c15.png?auth_key=1890952386-9d7b5372ef3141aeb83f4c84b8646dab-0-1ebe43ae482b2e1bb41fa6635f8320de">
+      <span class="logo-text"><span class="text-gold">S.I.D</span>_Music</span>
     </a>
 
     <nav class="site-nav" id="site-nav" aria-label="Main navigation">
-      <a href="#home"   class="nav-link is-active" data-page="home">Home</a>
-      <a href="#beats"  class="nav-link" data-page="beats">Beats</a>
-      <a href="#music"  class="nav-link" data-page="music">Music</a>
-      <a href="#about"  class="nav-link" data-page="about">About</a>
-      <a href="#contact" class="nav-link" data-page="contact">Contact</a>
+      <a href="#home"    class="nav-link is-active">Home</a>
+      <a href="#about"  class="nav-link">About</a>
+      <a href="#beats"   class="nav-link">Beats</a>
+      <a href="#music"   class="nav-link">Music</a>
+      <a href="#contact" class="nav-link">Contact</a>
     </nav>
 
-    <a href="#beats" class="btn btn-primary btn-small header-cta">Explore Beats</a>
+    <a href="#beats" class="btn btn-gold btn-small header-cta">Beat Store</a>
 
     <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -684,142 +616,98 @@
 
 <main>
 
-<!-- ================= PAGE: HOME ================= -->
-<section class="page" id="page-home">
+<!-- ================= 1. HERO / HOME ================= -->
+<section class="hero" id="home">
+  <div class="container hero-grid">
 
-  <div class="hero">
-    <div class="container hero-grid">
+    <div class="hero-content reveal">
+      <p class="eyebrow">Gospel Beats · Christian Music · Production</p>
 
-      <div class="hero-content reveal">
-        <p class="eyebrow">Music · Worship · Impact</p>
+      <h1 class="hero-title">S.I.D<span class="text-gold">_Music</span></h1>
+      <p class="motto">Sound. Inspiration. Destiny.</p>
 
-        <h1 class="hero-title">Beats with <span class="text-accent">purpose</span> — made to inspire change.</h1>
+      <p class="hero-text">
+        The official platform for my original beats, songs and music — modern gospel
+        production with a beat-creator's edge, built to inspire change. Preview the
+        catalog, license a beat, and take the sound to your ministry.
+      </p>
 
-        <p class="hero-text">
-          Hey, I'm S.I.D — a producer creating Spirit-filled beats and instrumentals
-          for worship leaders, gospel artists, and anyone chasing a sound with meaning.
-          Press play on the featured beat, browse the catalog, and when a beat speaks
-          to you… take it to the studio.
-        </p>
-
-        <div class="hero-actions">
-          <a href="#beats" class="btn btn-primary">Explore Beats</a>
-          <a href="#music" class="btn btn-ghost">Listen to My Music</a>
-        </div>
-
-        <!-- ✏️ EDIT: replace the "#" with your real profile URLs -->
-        <div class="hero-socials">
-          <span>Follow me</span>
-          <div class="social-row">
-            <a href="#" class="social-link" aria-label="Instagram" target="_blank" rel="noopener"><svg width="20" height="20"><use href="#i-instagram"/></svg></a>
-            <a href="#" class="social-link" aria-label="YouTube" target="_blank" rel="noopener"><svg width="20" height="20"><use href="#i-youtube"/></svg></a>
-            <a href="#" class="social-link" aria-label="TikTok" target="_blank" rel="noopener"><svg width="20" height="20"><use href="#i-tiktok"/></svg></a>
-            <a href="#" class="social-link" aria-label="X (Twitter)" target="_blank" rel="noopener"><svg width="18" height="18"><use href="#i-x"/></svg></a>
-            <a href="#" class="social-link" aria-label="Spotify" target="_blank" rel="noopener"><svg width="20" height="20"><use href="#i-spotify"/></svg></a>
-          </div>
-        </div>
+      <div class="hero-actions">
+        <a href="#beats" class="btn btn-gold">Explore Beats</a>
+        <a href="#music" class="btn btn-ghost">Listen to My Music</a>
       </div>
 
-      <!-- Your photo: drop it at images/profile.jpg -->
-      <div class="hero-photo reveal">
-        <div class="photo-frame">
-          <img src="images/profile.jpg"
-               alt="S.I.D — music producer"
-               data-fallback="https://picsum.photos/seed/sid-music/640/800.jpg">
-          <div class="photo-badge"><span class="pulse-dot"></span> Available for collabs</div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="intro">
-    <div class="container intro-grid">
-      <div class="intro-label reveal">01 — Intro</div>
-      <div class="intro-text reveal">
-        <h2>From a bedroom setup to a catalog of sounds.</h2>
-        <p>
-          Every beat on this site is mixed and mastered with one goal: giving
-          artists something they can build a career on. Everything is tagged by
-          genre and BPM so you can find your sound fast — preview it, download
-          it, and make it yours.
-        </p>
-
-        <!-- ✏️ EDIT: your real numbers -->
-        <div class="stats">
-          <div class="stat"><strong data-count="150" data-suffix="+">0+</strong><span>beats produced</span></div>
-          <div class="stat"><strong data-count="5">0</strong><span>genres and counting</span></div>
-          <div class="stat"><strong data-count="24" data-suffix="h">0h</strong><span>custom beat delivery</span></div>
+      <!-- ✏️ EDIT: replace the "#" with your real profile URLs -->
+      <div class="hero-socials">
+        <span>Follow the movement</span>
+        <div class="social-row">
+          <a href="#" class="social-link" aria-label="Instagram" target="_blank" rel="noopener"><svg width="20" height="20"><use href="#i-instagram"/></svg></a>
+          <a href="#" class="social-link" aria-label="YouTube" target="_blank" rel="noopener"><svg width="20" height="20"><use href="#i-youtube"/></svg></a>
+          <a href="#" class="social-link" aria-label="TikTok" target="_blank" rel="noopener"><svg width="20" height="20"><use href="#i-tiktok"/></svg></a>
+          <a href="#" class="social-link" aria-label="X (Twitter)" target="_blank" rel="noopener"><svg width="18" height="18"><use href="#i-x"/></svg></a>
+          <a href="#" class="social-link" aria-label="Spotify" target="_blank" rel="noopener"><svg width="20" height="20"><use href="#i-spotify"/></svg></a>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="featured">
-    <div class="container">
-
-      <div class="section-head reveal">
-        <h2 class="section-title">Featured Beat</h2>
-        <a href="#beats" class="see-all">All beats →</a>
+    <!-- Your official artist photo (Image 2) — displayed exactly as provided -->
+    <div class="hero-photo reveal">
+      <div class="photo-frame">
+        <img src="images/profile.png"
+             alt="Samuel Idugbo-ojo Daniel (S.I.D) in the studio"
+             data-fallback="https://z-cdn-media.chatglm.cn/files/69b8c9bb-2250-4ca4-9a8f-90ba9412a1fb.png?auth_key=1890952386-1037aea81f4c4ee282db297e1b65a41a7d-0-cf95a8f2231fb647a966a9f10e477969">
+        <div class="photo-badge"><span class="pulse-dot"></span> S.I.D — Founder · Artist · Beat Creator</div>
       </div>
-
-      <!-- This card is wired to the FIRST beat in the list in the script below -->
-      <article class="beat-card reveal" id="featured-beat" data-id="b1">
-        <div class="beat-cover">
-          <img src="images/beats/midnight-drive.jpg"
-               alt="Cover art for the beat Midnight Drive" loading="lazy"
-               data-fallback="https://picsum.photos/seed/sid-featured/700/700.jpg">
-        </div>
-
-        <div class="beat-info">
-          <div class="beat-meta">
-            <span class="tag">140 BPM</span>
-            <span class="tag">Trap</span>
-            <span class="tag tag-accent">Free download</span>
-          </div>
-
-          <h3 class="beat-title">Midnight Drive</h3>
-
-          <div class="player">
-            <button class="play-btn" data-track="b1" aria-label="Play Midnight Drive">
-              <svg class="icon icon-play" width="26" height="26" aria-hidden="true"><use href="#i-play"/></svg>
-              <svg class="icon icon-pause" width="26" height="26" aria-hidden="true"><use href="#i-pause"/></svg>
-            </button>
-
-            <div class="player-right">
-              <div class="player-top">
-                <div class="eq" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
-                <span class="time"><span id="feat-cur">0:00</span> / <span id="feat-tot">0:00</span></span>
-              </div>
-              <div class="progress" id="feat-progress" aria-label="Seek bar">
-                <div class="progress-fill" id="feat-fill"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="beat-actions">
-            <a class="btn btn-ghost btn-small js-download" data-id="b1" href="audio/beats/midnight-drive.mp3" download>
-              <svg width="16" height="16" aria-hidden="true"><use href="#i-download"/></svg>
-              Free download
-            </a>
-          </div>
-        </div>
-      </article>
-
     </div>
-  </div>
 
+  </div>
 </section>
 
-<!-- ================= PAGE: BEATS ================= -->
-<section class="page inner-page" id="page-beats" hidden>
+<!-- ================= 2. ABOUT S.I.D_MUSIC ================= -->
+<section class="section" id="about">
   <div class="container">
 
     <header class="section-head reveal">
-      <div>
-        <h2 class="section-title">Beat Catalog</h2>
-        <p class="section-sub">Preview in your browser, download the ones you love — every beat tagged by BPM and genre so you find your sound fast.</p>
+      <p class="eyebrow">About S.I.D_Music</p>
+      <h2 class="section-title">A sound with a purpose.</h2>
+      <p class="section-sub">
+        S.I.D_Music is the official platform for the original beats, songs and music of
+        Samuel Idugbo-ojo Daniel. The name carries the mission — every letter is a promise.
+      </p>
+    </header>
+
+    <div class="pillars reveal">
+      <div class="pillar">
+        <div class="pillar-letter">S</div>
+        <h3>Sound</h3>
+        <p>Craft without compromise. Every beat is composed, mixed and mastered to a professional, release-ready standard.</p>
       </div>
+      <div class="pillar">
+        <div class="pillar-letter">I</div>
+        <h3>Inspiration</h3>
+        <p>Faith is the foundation. Music that carries hope, truth and creativity from the studio into the world.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-letter">D</div>
+        <h3>Destiny</h3>
+        <p>Purpose in every note. These sounds exist to inspire change — in rooms, in hearts, in journeys.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= 3. BEAT STORE ================= -->
+<section class="section" id="beats">
+  <div class="container">
+
+    <header class="section-head reveal">
+      <p class="eyebrow">Beat Store</p>
+      <h2 class="section-title">Beats made to carry the message.</h2>
+      <p class="section-sub">
+        Preview any beat right in your browser. Free beats download instantly — premium
+        beats are licensed personally by S.I.D.
+      </p>
     </header>
 
     <div class="beats-toolbar reveal">
@@ -830,124 +718,113 @@
       <div class="genre-pills" id="genre-pills"></div>
     </div>
 
-    <div class="upload-card reveal">
-      <h3><svg width="18" height="18" aria-hidden="true"><use href="#i-plus"/></svg> Upload a beat</h3>
-      <p class="hint">Pick a beat from your computer to add it to the catalog below. It stays while this tab is open — to make it permanent, add it to the <code>beats</code> list in the script.</p>
-      <form id="upload-form" class="upload-grid">
-        <div class="field"><label for="u-title">Title</label><input id="u-title" type="text" placeholder="e.g. Sunday Morning"></div>
-        <div class="field"><label for="u-bpm">BPM</label><input id="u-bpm" type="number" min="40" max="300" value="140"></div>
-        <div class="field"><label for="u-genre">Genre</label>
-          <select id="u-genre">
-            <option>Trap</option><option>Drill</option><option>Afrobeats</option>
-            <option>Gospel</option><option>Hip-Hop</option><option>R&amp;B</option><option>Other</option>
-          </select>
-        </div>
-        <div class="field"><label for="u-cover">Cover art (image)</label><input id="u-cover" type="file" accept="image/*"></div>
-        <div class="field"><label for="u-audio">Audio file (required)</label><input id="u-audio" type="file" accept="audio/*" required></div>
-        <button type="submit" class="btn btn-primary">Add to catalog</button>
-      </form>
-    </div>
-
     <div class="beat-grid reveal" id="beat-grid"></div>
     <p class="empty-msg" id="beats-empty" hidden>No beats match your search.</p>
 
-    <div class="store-teaser reveal">
-      <strong>Beat store coming soon</strong> — licenses, pricing &amp; instant checkout.
-      Until then, <a href="#contact">contact me</a> about licensing a beat.
-    </div>
-
-  </div>
-</section>
-
-<!-- ================= PAGE: MUSIC ================= -->
-<section class="page inner-page" id="page-music" hidden>
-  <div class="container">
-
-    <header class="section-head reveal">
-      <div>
-        <h2 class="section-title">Released Music</h2>
-        <p class="section-sub">Stream everywhere — or preview right here in the browser.</p>
-      </div>
-    </header>
-
-    <div id="music-list" class="reveal"></div>
-
-    <p class="hint reveal">
-      Preview buttons play a generated placeholder until you add your real song files to the
-      <code>audio/music/</code> folder — and the streaming links come from the
-      <code>songs</code> list in the script.
+    <!-- Honest note: no fake checkout -->
+    <p class="store-note reveal">
+      🔒 <strong>Secure online checkout is coming soon.</strong> Until then, tapping
+      <em>Buy License</em> opens a direct chat with S.I.D — licenses are completed personally
+      and beat files are delivered straight to you.
     </p>
 
   </div>
 </section>
 
-<!-- ================= PAGE: ABOUT ================= -->
-<section class="page inner-page" id="page-about" hidden>
+<!-- ================= 4. SONGS / MUSIC ================= -->
+<section class="section" id="music">
   <div class="container">
 
     <header class="section-head reveal">
-      <div>
-        <h2 class="section-title">About S.I.D</h2>
-        <p class="section-sub">The person behind the beats.</p>
-      </div>
+      <p class="eyebrow">Music</p>
+      <h2 class="section-title">Original songs &amp; releases.</h2>
+      <p class="section-sub">
+        Stream on your favourite platform, or preview right here in the browser.
+      </p>
     </header>
 
-    <div class="about-grid">
-      <div class="about-photo reveal">
-        <img src="images/profile.jpg" alt="S.I.D in the studio"
-             data-fallback="https://picsum.photos/seed/sid-about/700/875.jpg">
-      </div>
+    <div id="music-list" class="reveal"></div>
 
-      <div class="about-text reveal">
-        <h3>Music · Worship · Impact</h3>
-        <!-- ✏️ EDIT: your story -->
-        <p>
-          I'm S.I.D — a producer who believes a beat can carry more than a bounce;
-          it can carry purpose. Everything you hear on this site comes from one small
-          studio, one pair of headphones, and a conviction that music inspires change.
-        </p>
-        <p>
-          From worship leaders who need a sound for Sunday, to rappers who want truth
-          in their trap — I build beats that serve the message, not override it.
-          Mix-ready, tagged by genre and BPM, and made to be rapped, sung, and worshipped on.
-        </p>
-        <a href="#contact" class="btn btn-primary">Work with me</a>
-      </div>
-    </div>
-
-    <div class="mission reveal">
-      <h3 class="mission-title">My mission</h3>
-      <div class="mission-grid">
-        <div class="pillar">
-          <div class="pillar-icon"><svg width="22" height="22" aria-hidden="true"><use href="#i-note"/></svg></div>
-          <h4>Music</h4>
-          <p>Craft first. Every beat is mixed and mastered so artists receive a sound they can release — not a rough idea.</p>
-        </div>
-        <div class="pillar">
-          <div class="pillar-icon"><svg width="22" height="22" aria-hidden="true"><use href="#i-heart"/></svg></div>
-          <h4>Worship</h4>
-          <p>Sounds that create space for something bigger than the song — for the studio, the stage, and the sanctuary.</p>
-        </div>
-        <div class="pillar">
-          <div class="pillar-icon"><svg width="22" height="22" aria-hidden="true"><use href="#i-trend"/></svg></div>
-          <h4>Impact</h4>
-          <p>Every download is a seed. I want the music that leaves this studio to change rooms, hearts, and charts.</p>
-        </div>
-      </div>
-    </div>
+    <p class="hint reveal">
+      Preview buttons play a generated placeholder until the real song files are added to the
+      <code>audio/music/</code> folder — streaming links are updated in the <code>songs</code> list in the script.
+    </p>
 
   </div>
 </section>
 
-<!-- ================= PAGE: CONTACT ================= -->
-<section class="page inner-page" id="page-contact" hidden>
+<!-- ================= 5. ARTIST PROFILE ================= -->
+<section class="section" id="artist">
+  <div class="container">
+
+    <div class="artist-grid">
+
+      <div class="artist-photo reveal">
+        <img src="images/profile.png"
+             alt="Samuel Idugbo-ojo Daniel — the S.I.D behind S.I.D_Music"
+             data-fallback="https://z-cdn-media.chatglm.cn/files/69b8c9bb-2250-4ca4-9a8f-90ba9412a1fb.png?auth_key=1890952386-1037aea81f4c4ee282db297e1b65a41a7d-0-cf95a8f2231fb647a966a9f10e477969">
+      </div>
+
+      <div class="artist-text reveal">
+        <p class="eyebrow">The Artist</p>
+        <h3>Samuel Idugbo-ojo Daniel</h3>
+        <p class="role-line">Founder · Artist · Beat Creator — S.I.D_Music</p>
+
+        <!-- ✏️ EDIT: your story -->
+        <p>
+          I'm Samuel — the S.I.D behind S.I.D_Music. I'm a gospel artist, producer and beat
+          creator building modern sounds for the Kingdom. My studio runs on a simple order of
+          operations: <strong>God first, music with purpose</strong>.
+        </p>
+        <p>
+          From worship instrumentals that lift a room, to hard-hitting gospel trap that carries
+          truth to the streets — every sound that leaves this studio is created to inspire change.
+        </p>
+        <p>
+          Whether you're a worship leader searching for Sunday's sound, a rapper who wants bars
+          with meaning, or a ministry needing original music — this platform was built for you.
+        </p>
+
+        <!-- ✏️ EDIT: your real numbers -->
+        <div class="stats">
+          <div class="stat"><strong data-count="150" data-suffix="+">0+</strong><span>beats produced</span></div>
+          <div class="stat"><strong data-count="25" data-suffix="+">0+</strong><span>songs &amp; releases</span></div>
+          <div class="stat"><strong data-count="40" data-suffix="+">0+</strong><span>collabs &amp; projects</span></div>
+        </div>
+
+        <a href="#contact" class="btn btn-gold">Work with me</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= 6. FEATURED MUSIC ================= -->
+<section class="section" id="featured">
   <div class="container">
 
     <header class="section-head reveal">
-      <div>
-        <h2 class="section-title">Contact</h2>
-        <p class="section-sub">Beats, collabs, licensing, or just to say hi — I reply within 24 hours.</p>
-      </div>
+      <p class="eyebrow">Featured Music</p>
+      <h2 class="section-title">The featured release.</h2>
+    </header>
+
+    <article class="featured-card reveal" id="featured-card">
+      <!-- Filled automatically from the songs list in the script -->
+    </article>
+
+  </div>
+</section>
+
+<!-- ================= 7. CONTACT + 8. SOCIAL ================= -->
+<section class="section" id="contact">
+  <div class="container">
+
+    <header class="section-head reveal">
+      <p class="eyebrow">Contact</p>
+      <h2 class="section-title">Let's create something eternal.</h2>
+      <p class="section-sub">
+        Beats, licensing, collabs, or ministry — I reply within 24 hours.
+      </p>
     </header>
 
     <div class="contact-grid">
@@ -955,13 +832,13 @@
       <form class="contact-form reveal" id="contact-form">
         <div class="field"><label for="c-name">Your name</label><input id="c-name" type="text" placeholder="Jane Doe" autocomplete="name" required></div>
         <div class="field"><label for="c-email">Your email</label><input id="c-email" type="email" placeholder="jane@example.com" autocomplete="email" required></div>
-        <div class="field"><label for="c-subject">Subject</label><input id="c-subject" type="text" placeholder="Beat licensing / collab / other"></div>
+        <div class="field"><label for="c-subject">Subject</label><input id="c-subject" type="text" placeholder="Beat licensing / collab / ministry"></div>
         <div class="field"><label for="c-message">Message</label><textarea id="c-message" placeholder="Tell me what you're working on…" required></textarea></div>
-        <button type="submit" class="btn btn-primary">Send message</button>
+        <button type="submit" class="btn btn-gold">Send message</button>
         <p class="hint">Opens your email app with the message ready to send.</p>
       </form>
 
-      <aside class="contact-info reveal">
+      <aside class="reveal">
         <a class="info-card js-mailto" href="#">
           <div class="info-icon"><svg width="20" height="20" aria-hidden="true"><use href="#i-mail"/></svg></div>
           <div><strong>Email</strong><span class="js-email-text">hello@sidmusic.com</span></div>
@@ -971,12 +848,12 @@
           <div><strong>WhatsApp</strong><span>Chat with me directly</span></div>
         </a>
         <div class="info-card">
-          <div class="info-icon"><svg width="20" height="20" aria-hidden="true"><use href="#i-note"/></svg></div>
+          <div class="info-icon"><svg width="20" height="20" aria-hidden="true"><use href="#i-play"/></svg></div>
           <div><strong>Response time</strong><span>Usually within 24 hours</span></div>
         </div>
 
         <div class="contact-socials">
-          <span class="hint">Follow S.I.D_MUSIC</span>
+          <span class="hint">Follow S.I.D_Music</span>
           <div class="social-row">
             <a href="#" class="social-link" aria-label="Instagram" target="_blank" rel="noopener"><svg width="20" height="20"><use href="#i-instagram"/></svg></a>
             <a href="#" class="social-link" aria-label="YouTube" target="_blank" rel="noopener"><svg width="20" height="20"><use href="#i-youtube"/></svg></a>
@@ -993,17 +870,21 @@
 
 </main>
 
-<!-- ================= FOOTER ================= -->
+<!-- ================= 9. FOOTER ================= -->
 <footer class="site-footer">
   <div class="container footer-grid">
 
     <div class="footer-brand">
       <a href="#home" class="logo">
-        <img src="images/logo.png" alt="S.I.D_MUSIC logo" class="logo-img">
-        <span class="logo-text">S.I.D<span class="logo-accent">_MUSIC</span></span>
+        <img src="images/logo.png"
+             alt="S.I.D_Music official logo"
+             class="logo-img"
+             data-fallback="https://z-cdn-media.chatglm.cn/files/d16b1698-37c2-4718-b5a1-cf36b2e99c15.png?auth_key=1890952386-9d7b5372ef3141aeb83f4c84b8646dab-0-1ebe43ae482b2e1bb41fa6635f8320de">
+        <span class="logo-text"><span class="text-gold">S.I.D</span>_Music</span>
       </a>
       <p class="footer-tagline">
-        Music · Worship · Impact — sounds from the studio of S.I.D, created to inspire change.
+        Sound. Inspiration. Destiny. — original gospel beats, songs and music
+        from the studio of Samuel Idugbo-ojo Daniel.
       </p>
       <div class="social-row">
         <a href="#" class="social-link" aria-label="Instagram" target="_blank" rel="noopener"><svg width="20" height="20"><use href="#i-instagram"/></svg></a>
@@ -1018,9 +899,9 @@
       <h4 class="footer-heading">Explore</h4>
       <ul class="footer-links">
         <li><a href="#home">Home</a></li>
-        <li><a href="#beats">Beats</a></li>
-        <li><a href="#music">Music</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#beats">Beat Store</a></li>
+        <li><a href="#music">Music</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -1037,12 +918,12 @@
   </div>
 
   <div class="container footer-bottom">
-    <p>© <span id="year">2025</span> S.I.D_MUSIC. All rights reserved.</p>
-    <p>Beats · Music · Licensing</p>
+    <p>© <span id="year">2025</span> S.I.D_Music — Samuel Idugbo-ojo Daniel. All rights reserved.</p>
+    <p>Sound · Inspiration · Destiny</p>
   </div>
 </footer>
 
-<!-- ================= MINI PLAYER (sticks around on every page) ================= -->
+<!-- ================= MINI PLAYER (follows you while browsing) ================= -->
 <div class="mini-player" id="mini-player" aria-label="Now playing">
   <img class="mini-cover" id="mini-cover" src="" alt="">
   <div class="mini-info">
@@ -1059,144 +940,115 @@
   </button>
 </div>
 
-<!-- Toast messages (friendlier than alerts) -->
+<!-- Toast messages -->
 <div class="toast" id="toast" role="status"></div>
 
 <script>
 /* ============================================================
-   S.I.D_MUSIC — ALL SCRIPTS (in one place)
-   1.  Your settings  ← EDIT THESE FIRST
-   2.  Beat & song catalogs  ← ADD YOUR MUSIC HERE
-   3.  Page router (turns #beats etc. into pages)
-   4.  Mobile menu
-   5.  Logo & image fallbacks
-   6.  Rendering (beats + songs)
-   7.  Filters & search
-   8.  Upload form
-   9.  Audio player (real files + generated demo previews)
-   10. Contact form
-   11. Extras: toasts, counters, reveal animations, year
+   S.I.D_MUSIC — ALL SCRIPTS
+   1.  Your settings            ← EDIT THESE FIRST
+   2.  Beat & song catalogs     ← ADD YOUR MUSIC HERE
+   3.  Generated cover artwork  (until you add real covers)
+   4.  Rendering (store, songs, featured)
+   5.  Filters & search
+   6.  Buy / download actions
+   7.  Audio player (real files + generated previews)
+   8.  Demo beat generator
+   9.  Navigation (menu + scroll-spy)
+   10. Image fallbacks (your files first, chat copy as backup)
+   11. Contact form & extras
    ============================================================ */
 
-/* ---------- 1. YOUR SETTINGS -------------------------------- */
-const CONTACT_EMAIL  = 'hello@sidmusic.com';   // ✏️ EDIT
-const WHATSAPP_NUMBER = '15551234567';        // ✏️ EDIT — country code + number, digits only
+/* ---------- 1. YOUR SETTINGS ---------------------------------- */
+const CONTACT_EMAIL   = 'hello@sidmusic.com';   // ✏️ EDIT: your real email
+const WHATSAPP_NUMBER = '2340000000000';       // ✏️ EDIT: country code + number, digits only
 
-/* ---------- 2. CATALOGS -------------------------------------
-   ADD A BEAT = copy one line, change the info, and put matching
-   files in images/beats/ and audio/beats/. Covers fall back to
-   a placeholder automatically if the image isn't there yet.
-   If an audio file is missing, its play button plays a generated
-   demo beat instead, so nothing ever looks broken.            */
+/* ---------- 2. CATALOGS ---------------------------------------
+   ADD A BEAT = copy one line and change the info. Drop matching
+   files into images/beats/ and audio/beats/ when you have them.
+   price: 0 makes it a free download. When you create a real payment
+   link (Stripe, Gumroad, Paystack…), add  checkoutUrl:'https://…'
+   and the Buy button will use it automatically.                 */
 const beats = [
-  { id:'b1', title:'Midnight Drive',   bpm:140, genre:'Trap',      free:true, cover:'images/beats/midnight-drive.jpg',   audio:'audio/beats/midnight-drive.mp3' },
-  { id:'b2', title:'Sunday Morning',   bpm:92,  genre:'Gospel',    free:true, cover:'images/beats/sunday-morning.jpg',   audio:'audio/beats/sunday-morning.mp3' },
-  { id:'b3', title:'Lagos Nights',     bpm:105, genre:'Afrobeats',            cover:'images/beats/lagos-nights.jpg',     audio:'audio/beats/lagos-nights.mp3' },
-  { id:'b4', title:'Warrior',          bpm:144, genre:'Drill',                cover:'images/beats/warrior.jpg',          audio:'audio/beats/warrior.mp3' },
-  { id:'b5', title:'Higher Ground',    bpm:88,  genre:'Gospel',                cover:'images/beats/higher-ground.jpg',    audio:'audio/beats/higher-ground.mp3' },
-  { id:'b6', title:'Late Night Grind', bpm:130, genre:'Hip-Hop',   free:true, cover:'images/beats/late-night-grind.jpg', audio:'audio/beats/late-night-grind.mp3' },
+  { id:'b1', title:'Sunday Morning', genre:'Gospel Trap',   bpm:140, price:0,     free:true, cover:'images/beats/sunday-morning.jpg', audio:'audio/beats/sunday-morning.mp3' },
+  { id:'b2', title:'Higher Ground',  genre:'Worship',        bpm:88,  price:24.99,            cover:'images/beats/higher-ground.jpg',  audio:'audio/beats/higher-ground.mp3' },
+  { id:'b3', title:'Glory',          genre:'Afro-Gospel',    bpm:105, price:29.99,            cover:'images/beats/glory.jpg',          audio:'audio/beats/glory.mp3' },
+  { id:'b4', title:'Warrior',        genre:'Christian Drill', bpm:144, price:34.99,            cover:'images/beats/warrior.jpg',        audio:'audio/beats/warrior.mp3' },
+  { id:'b5', title:'Testimony',      genre:'Gospel R&B',     bpm:92,  price:19.99,            cover:'images/beats/testimony.jpg',      audio:'audio/beats/testimony.mp3' },
+  { id:'b6', title:'New Wine',       genre:'Worship',        bpm:76,  price:0,     free:true, cover:'images/beats/new-wine.jpg',       audio:'audio/beats/new-wine.mp3' },
 ];
 
 /* ADD A SONG = copy one line and change the info.
-   ✏️ EDIT: replace the "#" links with your real streaming URLs. */
+   ✏️ EDIT: replace the "#" links with your real streaming URLs.  */
 const songs = [
-  { id:'s1', title:'Grace On Me', year:2024, cover:'images/music/grace-on-me.jpg', audio:'audio/music/grace-on-me.mp3', links:{ spotify:'#', youtube:'#', apple:'#' } },
-  { id:'s2', title:'Testimony',   year:2023, cover:'images/music/testimony.jpg',   audio:'audio/music/testimony.mp3',   links:{ spotify:'#', youtube:'#', apple:'#' } },
-  { id:'s3', title:'New Wine',    year:2025, cover:'images/music/new-wine.jpg',    audio:'audio/music/new-wine.mp3',    links:{ spotify:'#', youtube:'#', apple:'#' } },
+  { id:'s1', title:'Grace on Me', year:2025, featured:true,
+    desc:'A testimony set to sound — warm keys, heavy 808s and a hook written straight from the journey.',
+    cover:'images/music/grace-on-me.jpg', audio:'audio/music/grace-on-me.mp3',
+    links:{ spotify:'#', youtube:'#', apple:'#' } },
+  { id:'s2', title:'He Reigns', year:2024,
+    desc:'An afro-gospel declaration with a bounce — recorded for every room that needs good news.',
+    cover:'images/music/he-reigns.jpg', audio:'audio/music/he-reigns.mp3',
+    links:{ spotify:'#', youtube:'#', apple:'#' } },
+  { id:'s3', title:'Deeper', year:2023,
+    desc:'A quiet worship moment. Just keys, a prayer, and space for God to move.',
+    cover:'images/music/deeper.jpg', audio:'audio/music/deeper.mp3',
+    links:{ spotify:'#', youtube:'#', apple:'#' } },
 ];
 
-/* ---------- 3. PAGE ROUTER ---------------------------------- */
-const PAGES = ['home','beats','music','about','contact'];
-const PAGE_TITLES = {
-  home:'S.I.D_MUSIC — Beats & Music by S.I.D', beats:'Beats — S.I.D_MUSIC',
-  music:'Music — S.I.D_MUSIC', about:'About — S.I.D_MUSIC', contact:'Contact — S.I.D_MUSIC'
-};
+const featuredSong = songs.find(s => s.featured) || songs[0];
 
-function showPage(name){
-  document.querySelectorAll('.page').forEach(s => { s.hidden = (s.id !== 'page-' + name); });
-  document.querySelectorAll('.nav-link').forEach(a => a.classList.toggle('is-active', a.dataset.page === name));
-  document.title = PAGE_TITLES[name];
-  closeMenu();
-  window.scrollTo({ top: 0 });
+/* ---------- 3. GENERATED COVER ARTWORK ------------------------
+   Until you add real cover images, each beat/song gets an elegant
+   black & gold cover generated in the browser (title + subtitle). */
+function generatedCover(title, subtitle){
+  const t = String(title).replace(/&/g, '&amp;').replace(/</g, '&lt;');
+  const s = String(subtitle).replace(/&/g, '&amp;').replace(/</g, '&lt;');
+  const svg =
+    `<svg xmlns='http://www.w3.org/2000/svg' width='600' height='600'>` +
+    `<defs><radialGradient id='g' cx='50%' cy='38%' r='75%'>` +
+    `<stop offset='0' stop-color='#241d0d'/><stop offset='.55' stop-color='#100d08'/><stop offset='1' stop-color='#0a0908'/>` +
+    `</radialGradient></defs>` +
+    `<rect width='600' height='600' fill='url(#g)'/>` +
+    `<circle cx='300' cy='240' r='150' fill='none' stroke='#d4af37' stroke-opacity='.28' stroke-width='2'/>` +
+    `<circle cx='300' cy='240' r='112' fill='none' stroke='#d4af37' stroke-opacity='.16' stroke-width='1.5'/>` +
+    `<text x='300' y='268' font-family='Georgia,serif' font-size='96' fill='#d4af37' text-anchor='middle' font-style='italic'>&#9834;</text>` +
+    `<text x='300' y='455' font-family='Arial,sans-serif' font-size='34' fill='#f4f1e8' text-anchor='middle' letter-spacing='3'>${t.toUpperCase()}</text>` +
+    `<text x='300' y='497' font-family='Arial,sans-serif' font-size='19' fill='#a89e8a' text-anchor='middle' letter-spacing='4'>${s.toUpperCase()}</text>` +
+    `</svg>`;
+  return 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
 }
 
-function route(){
-  let name = (location.hash || '#home').slice(1);
-  if (!PAGES.includes(name)) name = 'home';
-  showPage(name);
-}
-window.addEventListener('hashchange', route);
-
-/* ---------- 4. MOBILE MENU ---------------------------------- */
-const navToggle = document.getElementById('nav-toggle');
-const siteNav   = document.getElementById('site-nav');
-
-function closeMenu(){
-  siteNav.classList.remove('open');
-  navToggle.classList.remove('open');
-  navToggle.setAttribute('aria-expanded', 'false');
-}
-navToggle.addEventListener('click', () => {
-  const isOpen = siteNav.classList.toggle('open');
-  navToggle.classList.toggle('open', isOpen);
-  navToggle.setAttribute('aria-expanded', isOpen);
-});
-siteNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
-
-/* ---------- 5. LOGO & IMAGE FALLBACKS ---------------------- */
-// Your logo replaces the styled text logo automatically.
-document.querySelectorAll('.logo-img').forEach(img => {
-  const show = () => {
-    img.style.display = 'block';
-    const text = img.parentElement.querySelector('.logo-text');
-    if (text) text.style.display = 'none';
-  };
-  if (img.complete && img.naturalWidth > 0) show();
-  else img.addEventListener('load', show);
-});
-
-// Any <img data-fallback="..."> shows its fallback if the file is missing.
-function attachFallbacks(scope){
-  scope.querySelectorAll('img[data-fallback]').forEach(img => {
-    if (img.dataset.bound) return;
-    img.dataset.bound = '1';
-    img.addEventListener('error', () => {
-      if (img.src !== img.dataset.fallback) img.src = img.dataset.fallback;
-    });
-  });
-}
-function coverFallback(){
-  return 'https://picsum.photos/seed/' + Math.random().toString(36).slice(2, 8) + '/600/600.jpg';
-}
-
-/* ---------- 6. RENDERING (BEATS + SONGS) -------------------- */
-const beatGrid   = document.getElementById('beat-grid');
-const beatsEmpty = document.getElementById('beats-empty');
+/* ---------- 4. RENDERING -------------------------------------- */
+const beatGrid    = document.getElementById('beat-grid');
+const beatsEmpty  = document.getElementById('beats-empty');
 const searchInput = document.getElementById('beat-search');
-const pillsWrap  = document.getElementById('genre-pills');
+const pillsWrap   = document.getElementById('genre-pills');
 
 function beatCard(b){
+  const priceLabel = b.free ? 'FREE' : '$' + b.price.toFixed(2);
   return `
-  <article class="beat-card-sm" data-id="${b.id}">
+  <article class="beat-card" data-id="${b.id}">
     <div class="bc-cover">
-      <img src="${b.cover}" alt="Cover art for ${b.title}" loading="lazy" data-fallback="${coverFallback()}">
-      <button class="bc-play" data-track="${b.id}" aria-label="Play ${b.title}">
+      <img src="${b.cover}" alt="Cover artwork for the beat ${b.title}" loading="lazy"
+           data-fallback="${generatedCover(b.title, b.genre + ' · ' + b.bpm + ' BPM')}">
+      <button class="bc-play" data-track="${b.id}" aria-label="Preview ${b.title}">
         <svg class="icon icon-play"  width="22" height="22" aria-hidden="true"><use href="#i-play"/></svg>
         <svg class="icon icon-pause" width="22" height="22" aria-hidden="true"><use href="#i-pause"/></svg>
       </button>
     </div>
     <div class="bc-body">
-      <div class="bc-tags">
-        <span class="tag">${b.bpm} BPM</span>
-        <span class="tag">${b.genre}</span>
-        ${b.free ? '<span class="tag tag-accent">Free</span>' : ''}
-      </div>
       <h3>${b.title}</h3>
-      <div class="bc-actions">
-        <a class="btn btn-ghost btn-small js-download" data-id="${b.id}" href="${b.downloadUrl || b.audio}" download>
-          <svg width="15" height="15" aria-hidden="true"><use href="#i-download"/></svg>
-          ${b.free ? 'Free download' : 'Download'}
-        </a>
+      <div class="bc-tags">
+        <span class="tag">${b.genre}</span>
+        <span class="tag">${b.bpm} BPM</span>
+      </div>
+      <div class="bc-foot">
+        <span class="price ${b.free ? 'is-free' : ''}">${priceLabel}</span>
+        ${b.free
+          ? `<a class="btn btn-ghost btn-small js-download" data-id="${b.id}" href="${b.audio}" download>
+               <svg width="15" height="15" aria-hidden="true"><use href="#i-download"/></svg>Download
+             </a>`
+          : `<button class="btn btn-gold btn-small" data-buy="${b.id}">Buy License</button>`}
       </div>
     </div>
   </article>`;
@@ -1205,11 +1057,11 @@ function beatCard(b){
 function songRow(s){
   return `
   <article class="song-row" data-id="${s.id}">
-    <img class="song-cover" src="${s.cover}" alt="Cover art for ${s.title}" loading="lazy"
-         data-fallback="https://picsum.photos/seed/${s.id}/300/300.jpg">
+    <img class="song-cover" src="${s.cover}" alt="Cover artwork for ${s.title}" loading="lazy"
+         data-fallback="${generatedCover(s.title, 'S.I.D_MUSIC · ' + s.year)}">
     <div class="song-info">
-      <h3>${s.title}</h3>
-      <span class="song-year">Released ${s.year} · S.I.D</span>
+      <h3>${s.title} <span class="song-year">· ${s.year}</span></h3>
+      <p class="song-desc">${s.desc}</p>
     </div>
     <div class="song-side">
       <button class="row-play" data-track="${s.id}" aria-label="Preview ${s.title}">
@@ -1225,6 +1077,44 @@ function songRow(s){
   </article>`;
 }
 
+function renderFeatured(){
+  const f = featuredSong;
+  const card = document.getElementById('featured-card');
+  card.dataset.id = f.id;
+  card.innerHTML = `
+    <div class="featured-cover">
+      <img src="${f.cover}" alt="Cover artwork for ${f.title}" loading="lazy"
+           data-fallback="${generatedCover(f.title, 'S.I.D_MUSIC · ' + f.year)}">
+    </div>
+    <div class="featured-info">
+      <span class="tag tag-gold">Featured Release</span>
+      <h3>${f.title}</h3>
+      <p class="featured-desc">${f.desc} Stream it everywhere, or preview it right here.</p>
+      <div class="player">
+        <button class="play-btn" data-track="${f.id}" aria-label="Play ${f.title}">
+          <svg class="icon icon-play"  width="26" height="26" aria-hidden="true"><use href="#i-play"/></svg>
+          <svg class="icon icon-pause" width="26" height="26" aria-hidden="true"><use href="#i-pause"/></svg>
+        </button>
+        <div class="player-right">
+          <div class="player-top">
+            <div class="eq" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+            <span class="time"><span id="feat-cur">0:00</span> / <span id="feat-tot">0:00</span></span>
+          </div>
+          <div class="progress" id="feat-progress" aria-label="Seek bar">
+            <div class="progress-fill" id="feat-fill"></div>
+          </div>
+        </div>
+      </div>
+      <div class="listen-pills" style="flex-direction:row">
+        <a class="listen-pill" href="${f.links.spotify}" target="_blank" rel="noopener">Spotify</a>
+        <a class="listen-pill" href="${f.links.youtube}" target="_blank" rel="noopener">YouTube</a>
+        <a class="listen-pill" href="${f.links.apple}"   target="_blank" rel="noopener">Apple Music</a>
+      </div>
+    </div>`;
+  attachFallbacks(card);
+  syncPlayUI();
+}
+
 function renderSongs(){
   const list = document.getElementById('music-list');
   list.innerHTML = songs.map(songRow).join('');
@@ -1232,7 +1122,7 @@ function renderSongs(){
   syncPlayUI();
 }
 
-/* ---------- 7. FILTERS & SEARCH ------------------------------ */
+/* ---------- 5. FILTERS & SEARCH -------------------------------- */
 let activeGenre = 'All';
 
 function renderPills(){
@@ -1263,59 +1153,59 @@ pillsWrap.addEventListener('click', e => {
 });
 searchInput.addEventListener('input', renderBeats);
 
-/* ---------- 8. UPLOAD FORM ----------------------------------- */
-const uploadForm = document.getElementById('upload-form');
-const uTitle = document.getElementById('u-title');
-const uBpm   = document.getElementById('u-bpm');
-const uGenre = document.getElementById('u-genre');
-const uCover = document.getElementById('u-cover');
-const uAudio = document.getElementById('u-audio');
+/* ---------- 6. BUY / DOWNLOAD ACTIONS -------------------------
+   HONEST PAYMENTS: no checkout is connected yet. Buy opens a
+   direct WhatsApp chat with a pre-filled order message. When you
+   create real payment links later, add checkoutUrl to any beat
+   and the button switches to it automatically — no other changes. */
+function buyBeat(b){
+  if (b.checkoutUrl) { window.open(b.checkoutUrl, '_blank'); return; }
+  if (WHATSAPP_NUMBER === '2340000000000') {
+    showToast('Almost there! First set your real WhatsApp number in the CONFIG at the top of the script.');
+    return;
+  }
+  const text = encodeURIComponent(
+    `Hello S.I.D! I would like to license the beat "${b.title}" (${b.genre}, ${b.bpm} BPM — $${b.price.toFixed(2)}).`
+  );
+  window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + text, '_blank');
+  showToast('Secure checkout coming soon — opening WhatsApp to complete your license with S.I.D directly.');
+}
 
-uploadForm.addEventListener('submit', e => {
-  e.preventDefault();
-  const audioFile = uAudio.files[0];
-  if (!audioFile) { showToast('Choose an audio file first.'); return; }
-
-  const coverFile = uCover.files[0];
-  beats.push({
-    id: 'u' + Date.now(),
-    title: uTitle.value.trim() || 'Untitled Beat',
-    bpm: parseInt(uBpm.value, 10) || 120,
-    genre: uGenre.value,
-    cover: coverFile ? URL.createObjectURL(coverFile) : coverFallback(),
-    audio: URL.createObjectURL(audioFile),
-    downloadUrl: URL.createObjectURL(audioFile),
-    free: true
-  });
-  uploadForm.reset();
-  renderPills();
-  renderBeats();
-  showToast('"' + beats[beats.length - 1].title + '" added to your catalog. (Stays until you close this tab)');
+document.addEventListener('click', e => {
+  const buyBtn = e.target.closest('[data-buy]');
+  if (buyBtn) {
+    const b = beats.find(x => x.id === buyBtn.dataset.buy);
+    if (b) buyBeat(b);
+    return;
+  }
+  const dl = e.target.closest('a.js-download');
+  if (dl) {
+    const t = beats.find(x => x.id === dl.dataset.id) || songs.find(x => x.id === dl.dataset.id);
+    if (t && t.fileMissing) {
+      e.preventDefault();
+      showToast('That file is not uploaded yet — add it at: ' + t.audio);
+    }
+  }
 });
 
-/* ---------- 9. AUDIO PLAYER ----------------------------------
-   One player for the whole site. Real files play as-is; if a
-   file is missing, a generated demo beat plays instead, and the
-   mini-player follows you across every page.                     */
+/* ---------- 7. AUDIO PLAYER ------------------------------------
+   One player for the whole site. Real files play as-is; if a file
+   is missing, a generated preview beat plays instead.              */
 const audioEl = new Audio();
 audioEl.preload = 'metadata';
 
-let current = null;   // the track object being played
+let current = null;
 let playing = false;
 let demoMode = false;
 
-const mini        = document.getElementById('mini-player');
-const miniCover   = document.getElementById('mini-cover');
-const miniTitle   = document.getElementById('mini-title');
-const miniFill    = document.getElementById('mini-fill');
-const miniTime    = document.getElementById('mini-time');
+const mini         = document.getElementById('mini-player');
+const miniCover    = document.getElementById('mini-cover');
+const miniTitle    = document.getElementById('mini-title');
+const miniFill     = document.getElementById('mini-fill');
+const miniTime     = document.getElementById('mini-time');
 const miniProgress = document.getElementById('mini-progress');
-const miniToggle  = document.getElementById('mini-toggle');
-const miniClose   = document.getElementById('mini-close');
-const featFill  = document.getElementById('feat-fill');
-const featCur   = document.getElementById('feat-cur');
-const featTot   = document.getElementById('feat-tot');
-const featBar   = document.getElementById('feat-progress');
+const miniToggle   = document.getElementById('mini-toggle');
+const miniClose    = document.getElementById('mini-close');
 
 function fmt(s){
   if (!isFinite(s) || isNaN(s)) return '0:00';
@@ -1331,15 +1221,18 @@ function updateTimes(cur, tot){
   const pct = tot > 0 ? (cur / tot * 100) : 0;
   miniFill.style.width = pct + '%';
   miniTime.textContent = fmt(cur) + ' / ' + fmt(tot);
-  if (current && current.id === 'b1') {          // featured beat card on Home
-    featFill.style.width = pct + '%';
-    featCur.textContent = fmt(cur);
-    featTot.textContent = fmt(tot);
+  if (current && current.id === featuredSong.id) {   // featured-release player
+    const fill = document.getElementById('feat-fill');
+    const curEl = document.getElementById('feat-cur');
+    const totEl = document.getElementById('feat-tot');
+    if (fill) fill.style.width = pct + '%';
+    if (curEl) curEl.textContent = fmt(cur);
+    if (totEl) totEl.textContent = fmt(tot);
   }
 }
 
 function syncPlayUI(){
-  document.querySelectorAll('.beat-card, .beat-card-sm, .song-row').forEach(el => {
+  document.querySelectorAll('.beat-card, .song-row, .featured-card').forEach(el => {
     el.classList.toggle('is-playing', !!current && el.dataset.id === current.id && playing);
   });
   mini.classList.toggle('is-playing', playing);
@@ -1347,7 +1240,7 @@ function syncPlayUI(){
     mini.classList.add('visible');
     document.body.classList.add('has-mini');
     miniTitle.textContent = current.title;
-    miniCover.src = current.cover;
+    if (current.cover) miniCover.src = current.cover;
   } else {
     mini.classList.remove('visible');
     document.body.classList.remove('has-mini');
@@ -1357,15 +1250,13 @@ function syncPlayUI(){
 function stopAll(clearCurrent){
   audioEl.pause();
   if (demo.timer) { clearInterval(demo.timer); demo.timer = null; }
-  demoMode = false;
-  playing = false;
+  demoMode = false; playing = false;
   try { audioEl.currentTime = 0; } catch (err) {}
   if (clearCurrent) current = null;
   updateTimes(0, 0);
   syncPlayUI();
 }
 
-// Try to play the real file; if it's missing, fall back to the demo.
 function tryPlayAudio(){
   const p = audioEl.play();
   if (p) p.catch(() => {
@@ -1392,37 +1283,34 @@ function togglePlay(){
   }
 }
 
-// One click-handler covers every play button and download link on the site.
+/* One click-handler covers every play button on the site */
 document.addEventListener('click', e => {
   const playBtn = e.target.closest('[data-track]');
   if (playBtn) {
     const t = findTrack(playBtn.dataset.track);
     if (t) playTrack(t);
-    return;
-  }
-  const dl = e.target.closest('a.js-download');
-  if (dl) {
-    const t = findTrack(dl.dataset.id);
-    if (t && t.fileMissing) {
-      e.preventDefault();
-      showToast('That file is not on your computer yet — add it at: ' + t.audio);
-    }
   }
 });
 
 function seekFromEvent(e, bar){
   if (!current) return;
-  if (demoMode) { showToast('Seeking works once you add your real audio files.'); return; }
+  if (demoMode) { showToast('Seeking works once your real audio files are added.'); return; }
   if (!audioEl.duration) return;
   const r = bar.getBoundingClientRect();
   const ratio = Math.min(Math.max((e.clientX - r.left) / r.width, 0), 1);
   audioEl.currentTime = ratio * audioEl.duration;
 }
 miniProgress.addEventListener('click', e => seekFromEvent(e, miniProgress));
-featBar.addEventListener('click', e => seekFromEvent(e, featBar));
+document.addEventListener('click', e => {
+  const bar = e.target.closest('#feat-progress');
+  if (bar) seekFromEvent(e, bar);
+});
 
 miniToggle.addEventListener('click', togglePlay);
 miniClose.addEventListener('click', () => stopAll(true));
+miniCover.addEventListener('error', () => {
+  if (current) miniCover.src = generatedCover(current.title, 'S.I.D_MUSIC');
+});
 
 audioEl.addEventListener('play',  () => { playing = true;  syncPlayUI(); });
 audioEl.addEventListener('pause', () => { playing = false; syncPlayUI(); });
@@ -1437,22 +1325,22 @@ audioEl.addEventListener('ended', () => {
   syncPlayUI();
 });
 
-/* ---------- 10. DEMO BEAT GENERATOR (Web Audio) --------------
+/* ---------- 8. DEMO PREVIEW GENERATOR (Web Audio) --------------
    Builds a simple beat live in the browser — used only when a
-   real audio file hasn't been added yet.                        */
-let ctx = null;
+   real audio file hasn't been uploaded yet.                        */
+let actx = null;
 function getCtx(){
-  if (!ctx) ctx = new (window.AudioContext || window.webkitAudioContext)();
-  return ctx;
+  if (!actx) actx = new (window.AudioContext || window.webkitAudioContext)();
+  return actx;
 }
-let noise = null;
+let noiseBuf = null;
 function getNoise(ac){
-  if (!noise) {
-    noise = ac.createBuffer(1, ac.sampleRate * 0.3, ac.sampleRate);
-    const d = noise.getChannelData(0);
+  if (!noiseBuf) {
+    noiseBuf = ac.createBuffer(1, ac.sampleRate * 0.3, ac.sampleRate);
+    const d = noiseBuf.getChannelData(0);
     for (let i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1;
   }
-  return noise;
+  return noiseBuf;
 }
 function kick(t){
   const ac = getCtx(), o = ac.createOscillator(), g = ac.createGain();
@@ -1505,20 +1393,20 @@ function startDemo(track){
   const ac = getCtx();
   if (ac.state === 'suspended') ac.resume();
   demo.step = 0; demo.elapsed = 0; demo.len = 30;
-  demo.stepDur = 60 / track.bpm / 4;                       // length of a 16th note
-  demo.root = 55 * Math.pow(2, (track.bpm % 5) / 12);       // slight variety per beat
+  demo.stepDur = 60 / track.bpm / 4;
+  demo.root = 55 * Math.pow(2, (track.bpm % 5) / 12);
   demo.isSong = !!songs.find(s => s.id === track.id);
   demo.timer = setInterval(tickDemo, demo.stepDur * 1000);
   tickDemo();
-  showToast('No audio file found — playing a generated demo. Add yours at: ' + track.audio);
+  showToast('No audio file uploaded yet — playing a generated preview. Add yours at: ' + track.audio);
   syncPlayUI();
 }
 
 function tickDemo(){
   const t = getCtx().currentTime + 0.03;
   const s = demo.step;
-  const kickSteps  = demo.isSong ? [0, 8]      : [0, 6, 10];
-  const bassSteps  = demo.isSong ? {0:0, 8:5}  : {0:0, 6:3, 10:5};
+  const kickSteps = demo.isSong ? [0, 8]     : [0, 6, 10];
+  const bassSteps = demo.isSong ? {0:0, 8:5} : {0:0, 6:3, 10:5};
   if (kickSteps.includes(s)) kick(t);
   if (s === 4 || s === 12) snare(t);
   if (s % 2 === 0) hat(t, s === 14);
@@ -1529,13 +1417,12 @@ function tickDemo(){
   demo.step = (s + 1) % 16;
   demo.elapsed += demo.stepDur;
   updateTimes(Math.min(demo.elapsed, demo.len), demo.len);
-  if (demo.elapsed >= demo.len) {                           // demo ends after 30s
+  if (demo.elapsed >= demo.len) {
     clearInterval(demo.timer); demo.timer = null;
     demoMode = false; playing = false;
     syncPlayUI();
   }
 }
-
 function pauseDemo(){
   clearInterval(demo.timer); demo.timer = null;
   playing = false; syncPlayUI();
@@ -1547,12 +1434,67 @@ function resumeDemo(){
   playing = true; syncPlayUI();
 }
 
-/* ---------- 11. CONTACT FORM + EXTRAS ------------------------ */
+/* ---------- 9. NAVIGATION ------------------------------------- */
+const navToggle = document.getElementById('nav-toggle');
+const siteNav   = document.getElementById('site-nav');
+
+function closeMenu(){
+  siteNav.classList.remove('open');
+  navToggle.classList.remove('open');
+  navToggle.setAttribute('aria-expanded', 'false');
+}
+navToggle.addEventListener('click', () => {
+  const isOpen = siteNav.classList.toggle('open');
+  navToggle.classList.toggle('open', isOpen);
+  navToggle.setAttribute('aria-expanded', isOpen);
+});
+siteNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+/* Scroll-spy: highlights the nav link of the section on screen */
+const navLinks = Array.from(document.querySelectorAll('.nav-link'));
+const spyIO = new IntersectionObserver(entries => {
+  entries.forEach(en => {
+    if (en.isIntersecting) {
+      navLinks.forEach(a => a.classList.toggle('is-active', a.getAttribute('href') === '#' + en.target.id));
+    }
+  });
+}, { rootMargin: '-40% 0px -55% 0px' });
+['home', 'about', 'beats', 'music', 'contact'].forEach(id => {
+  const el = document.getElementById(id);
+  if (el) spyIO.observe(el);
+});
+
+/* ---------- 10. IMAGE FALLBACKS --------------------------------
+   Every image tries your own file first (images/…), then falls
+   back — your logo & photo use the copies from this chat until
+   you add the files to your repo; covers use generated artwork.  */
+function attachFallbacks(scope){
+  scope.querySelectorAll('img[data-fallback]').forEach(img => {
+    if (img.dataset.bound) return;
+    img.dataset.bound = '1';
+    const swap = () => { if (img.src !== img.dataset.fallback) img.src = img.dataset.fallback; };
+    if (img.complete && img.naturalWidth === 0) swap();   // already failed (cached)
+    img.addEventListener('error', swap);
+  });
+}
+
+/* Your logo: when the image loads, hide the text version */
+document.querySelectorAll('.logo-img').forEach(img => {
+  const show = () => {
+    img.style.display = 'block';
+    const text = img.parentElement.querySelector('.logo-text');
+    if (text) text.style.display = 'none';
+  };
+  if (img.complete && img.naturalWidth > 0) show();
+  else img.addEventListener('load', show);
+});
+
+/* ---------- 11. CONTACT FORM & EXTRAS -------------------------- */
 const contactForm = document.getElementById('contact-form');
 contactForm.addEventListener('submit', e => {
   e.preventDefault();
-  const name = document.getElementById('c-name').value.trim();
-  const email = document.getElementById('c-email').value.trim();
+  const name    = document.getElementById('c-name').value.trim();
+  const email   = document.getElementById('c-email').value.trim();
   const subject = document.getElementById('c-subject').value.trim();
   const message = document.getElementById('c-message').value.trim();
   if (!name || !email || !message) { showToast('Please fill in your name, email and message.'); return; }
@@ -1563,12 +1505,12 @@ contactForm.addEventListener('submit', e => {
   showToast('Opening your email app…');
 });
 
-// Fill in email & WhatsApp links from the settings at the top.
+/* Fill email & WhatsApp links from the settings at the top */
 document.querySelectorAll('.js-mailto').forEach(a => a.href = 'mailto:' + CONTACT_EMAIL);
 document.querySelectorAll('.js-email-text').forEach(el => el.textContent = CONTACT_EMAIL);
 document.querySelectorAll('.js-whatsapp').forEach(a => a.href = 'https://wa.me/' + WHATSAPP_NUMBER);
 
-// Toast messages.
+/* Toast messages */
 let toastTimer;
 function showToast(msg){
   const t = document.getElementById('toast');
@@ -1578,7 +1520,7 @@ function showToast(msg){
   toastTimer = setTimeout(() => t.classList.remove('show'), 4200);
 }
 
-// Animated number counters in the stats.
+/* Animated number counters */
 function animateCount(el){
   const target = +el.dataset.count, suffix = el.dataset.suffix || '';
   const t0 = performance.now(), dur = 1200;
@@ -1593,23 +1535,23 @@ const countIO = new IntersectionObserver(entries => {
 }, { threshold: .5 });
 document.querySelectorAll('[data-count]').forEach(el => countIO.observe(el));
 
-// Scroll-reveal animations.
+/* Scroll-reveal animations */
 const revealIO = new IntersectionObserver(entries => {
   entries.forEach(en => {
     if (en.isIntersecting) { en.target.classList.add('visible'); revealIO.unobserve(en.target); }
   });
-}, { threshold: .15 });
+}, { threshold: .12 });
 document.querySelectorAll('.reveal').forEach(el => revealIO.observe(el));
 
-// Auto copyright year.
+/* Auto copyright year */
 document.getElementById('year').textContent = new Date().getFullYear();
 
-/* ---------- START UP ----------------------------------------- */
+/* ---------- START UP ------------------------------------------- */
 attachFallbacks(document);
 renderPills();
 renderBeats();
 renderSongs();
-route();
+renderFeatured();
 </script>
 
 </body>
